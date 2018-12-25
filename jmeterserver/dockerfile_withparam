@@ -1,0 +1,13 @@
+FROM kevin/jmeterbase5.0
+MAINTAINER zzkam
+
+# Ports to be exposed from the container for JMeter Slaves/Server
+EXPOSE 1099 50000
+
+ENV PARAMS=""
+
+# Application to run on starting the container
+ENTRYPOINT cd /sample-test \
+	&& $JMETER_HOME/bin/jmeter-server $PARAMS\
+                        -Dserver.rmi.localport=50000 \
+                        -Dserver_port=1099

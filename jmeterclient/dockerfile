@@ -1,0 +1,5 @@
+FROM kevin/jmeterbase5.0
+MAINTAINER zzkam
+
+# Ports to be exposed from the container for JMeter Master
+EXPOSE 60000
