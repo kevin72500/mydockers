@@ -1,0 +1,7 @@
+docker run -d -p 3306:3306  --name ct_mysql --restart always  -e MYSQL_ROOT_PASSWORD=qwerty -v /data/mysql/data:/var/lib/mysql  mysql:5.7.25
+
+mysql创建好以后，创建数据库httprunner
+
+docker run -d -p 15672:15672 -p 5672:5672     -e RABBITMQ_DEFAULT_USER=user     -e RABBITMQ_DEFAULT_PASS=user123  --name ct_rabbitmq     --restart always     rabbitmq:3.7-management
+
+docker run -d -p 8000:8000 -p 5555:5555  --name ct_httprunner  -e DB_NAME=httprunner  -e DB_USER_NAME=root  -e DB_USER_PWD=qwerty  -e DB_HOST=db  -e MQ_HOST=mq  -e MQ_USER_NAME=user  -e MQ_USER_PWD=user123  --restart always  --link=ct_mysql:db  --link=ct_rabbitmq:mq  -d ricky29711/httprunnermanager

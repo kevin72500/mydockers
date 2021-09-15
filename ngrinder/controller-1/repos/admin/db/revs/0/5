@@ -1,0 +1,58 @@
+PLAIN
+K 11
+targetHosts
+V 0
+
+K 9
+validated
+V 4
+true
+END
+ENDREP
+id: 1-3.0.r5/62
+type: file
+pred: 1-3.0.r4/62
+count: 2
+text: 3 0 930 1987 84b3b93bbbde9080f359eafdaf8a1a24 da5d084c3418ba525cfe28f0ee03b900d044454a 4-4/_2
+props: 5 0 49 49 3fe0195699b968c3c3960bf00486e140
+cpath: /testScript/zhihu.py
+copyroot: 0 /
+
+PLAIN
+K 8
+zhihu.py
+V 16
+file 1-3.0.r5/62
+END
+ENDREP
+id: 0-2.0.r5/361
+type: dir
+pred: 0-2.0.r4/363
+count: 3
+text: 5 309 39 39 41690eff5cd3833019385d8175dd4b56
+cpath: /testScript
+copyroot: 0 /
+
+PLAIN
+K 14
+.gitconfig.yml
+V 17
+file 0-1.0.r1/346
+K 10
+testScript
+V 16
+dir 0-2.0.r5/361
+END
+ENDREP
+id: 0.0.r5/599
+type: dir
+pred: 0.0.r4/602
+count: 5
+text: 5 501 85 85 95a96e3bc5942f5cbf7a17b320e87783
+cpath: /
+copyroot: 0 /
+
+1-3.0.t4-4 modify-file true true /testScript/zhihu.py
+
+
+599 725

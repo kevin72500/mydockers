@@ -1,0 +1,36 @@
+2021-07-24 00:46:33,956 INFO  Setting of nGrinder local DNS successfully
+2021-07-24 00:46:33,967 INFO  The Grinder version 3.9.1
+2021-07-24 00:46:33,974 INFO  Java(TM) SE Runtime Environment 1.8.0_201-b09: Java HotSpot(TM) 64-Bit Server VM (25.201-b09, mixed mode) on Linux amd64 4.19.76-linuxkit
+2021-07-24 00:46:33,983 INFO  time zone is GMT (+0000)
+2021-07-24 00:46:34,192 INFO  worker process 0 of agent number 0
+2021-07-24 00:46:34,371 INFO  Instrumentation agents: byte code transforming instrumenter for Jython 2.7; byte code transforming instrumenter for Java
+2021-07-24 00:46:43,816 INFO  registered plug-in net.grinder.plugin.http.HTTPPlugin
+2021-07-24 00:46:43,880 INFO  Running "zhihu.py" using Jython 2.7.2 (v2.7.2:925a3cc3b49d, Mar 21 2020, 10:03:58)
+[Java HotSpot(TM) 64-Bit Server VM (Oracle Corporation)]
+2021-07-24 00:46:44,027 INFO  starting, will do 1 run
+2021-07-24 00:46:44,028 INFO  Start time is 1627087604028 ms since Epoch
+2021-07-24 00:46:44,415 INFO  http://zhihu.com/ -> 301 Moved Permanently, 182 bytes [Redirect, ensure the next URL is https://www.zhihu.com/]
+2021-07-24 00:46:44,423 WARN  Warning. The response may not be correct. The response code was 301.
+2021-07-24 00:46:44,429 INFO  finished 1 run
+2021-07-24 00:46:44,433 INFO  elapsed time is 405 ms
+2021-07-24 00:46:44,435 INFO  Final statistics for this process:
+2021-07-24 00:46:44,895 INFO  
+             Tests        Errors       Mean Test    Test Time    TPS          Mean         Response     Response     Mean time to Mean time to Mean time to 
+                                       Time (ms)    Standard                  response     bytes per    errors       resolve host establish    first byte   
+                                                    Deviation                 length       second                                 connection                
+                                                    (ms)                                                                                                    
+
+Test 1       1            0            369.00       0.00         2.47         182.00       449.38       0            184.00       248.00       325.00        "zhihu.com"
+
+Totals       1            0            369.00       0.00         2.47         182.00       449.38       0            184.00       248.00       325.00       
+
+  Tests resulting in error only contribute to the Errors column.          
+  Statistics for individual tests can be found in the data file, including
+  (possibly incomplete) statistics for erroneous tests. Composite tests   
+  are marked with () and not included in the totals.                      
+
+
+
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF-8
+2021-07-24 00:46:43,897 INFO  validation-0: Starting threads
+2021-07-24 00:46:44,906 INFO  validation-0: Finished

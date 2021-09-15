@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  ngrinder-controller-1:
+    image: ngrinder/controller
+    container_name: ngrinder-controller-1
+    hostname: ngrinder-controller-1
+    networks:
+      - server
+    ports:
+      - 8087:80
+      - 16001:16001
+      - 12000-12009:12000-12009
+    volumes:
+      - /Users/oupeng/dockerApp/ngrinder/controller-1:/opt/ngrinder-controller
+  ngrinder-agent-1:
+    image: ngrinder/agent
+    container_name: ngrinder-agent-1
+    hostname: ngrinder-agent-1
+    networks:
+      - server
+    volumes:
+      - /Users/oupeng/dockerApp/ngrinder/agent-1:/opt/ngrinder-agent
+    command:
+      - ngrinder-controller-1:8087
+  ngrinder-agent-2:
+    image: ngrinder/agent
+    container_name: ngrinder-agent-2
+    hostname: ngrinder-agent-2
+    networks:
+      - server
+    volumes:
+      - /Users/oupeng/dockerApp/ngrinder/agent-2:/opt/ngrinder-agent
+    command:
+      - ngrinder-controller-1:8087
+
+networks:
+  server:
+    driver:
+      bridge
